@@ -1,7 +1,23 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+/*
+/ 1. Header Component
+    - Logo
+    - Navbar (Home,About uS,Carts,Contact)
+  2. Body Component
+       - Searchbar
+       - Card container
+          - Cards (restaurent details - image, name)
 
+  3. Footer Component
+      - About short info
+      - Quick links
+      - Contact 
+      - Copyright
+  
+
+*/
 ## Available Scripts
 
 In the project directory, you can run:
