@@ -121,3 +121,26 @@ export const RestaurantList = [
     },
   },
 ];
+
+export const carouseldata =[
+  {
+    id:1,
+    img: 'food1.jpg'
+  },
+  {
+    id:2,
+    img: 'food2.jpg'
+  },
+  {
+    id:3,
+    img: 'food3.jpg'
+  },
+  {
+    id:4,
+    img: 'food4.jpg'
+  },
+  {
+    id:5,
+    img: 'food5.jpg'
+  }
+]

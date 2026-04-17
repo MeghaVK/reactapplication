@@ -12,7 +12,9 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.cardsDiv{
+  width: 100%;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,4 +37,37 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.footer{
+  padding: 30px;
+  border-top: 1px solid #ccc;
+}
+.offer-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.offer-carousel {
+  display: flex;
+  overflow-x: auto;   /* ✅ REQUIRED */
+  scroll-behavior: smooth;
+  gap: 16px;
+  width: 100%;
+}
+
+.offer-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* 👇 ensures overflow exists */
+.offer-carousel .card {
+  flex: 0 0 calc(100% / 3);
+  max-width: calc(100% / 3);
+}
+
+.offer-carousel .card img {
+  width: 100%;
+  display: block;
 }

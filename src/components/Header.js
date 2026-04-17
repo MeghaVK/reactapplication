@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const Header = () => {
   const [btnname,setbtnname]=useState('Login');
+  useEffect(()=>{
+    console.log('header useEffect called')
+  },[btnname])
+ 
   return (
     
     <nav className='navbar navbar navbar-expand-lg '>
