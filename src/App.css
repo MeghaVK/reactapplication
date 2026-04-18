@@ -71,3 +71,114 @@
   width: 100%;
   display: block;
 }
+
+/* Main container */
+.menu {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Restaurant header card */
+.menu-header {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Restaurant name */
+.menu-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Info text */
+.menu-header p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Rating badge */
+.menu-rating {
+  display: inline-block;
+  background: #28a745;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+/* Section title */
+.menu h2 {
+  margin: 20px 0 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Menu items list */
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Each item */
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-3px);
+}
+
+/* Item text */
+.item-info h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.item-info p {
+  margin: 3px 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Price */
+.item-price {
+  font-weight: 600;
+  color: #333;
+}
+
+/* 📱 Mobile */
+@media (max-width: 576px) {
+  .menu {
+    padding: 15px;
+  }
+
+  .menu-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .item-price {
+    align-self: flex-end;
+  }
+}

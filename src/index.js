@@ -5,11 +5,14 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import AppLayout from './App';
+import { RouterProvider } from 'react-router-dom';
+import appRouter from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppLayout />
+    <RouterProvider router={appRouter} />
+    
   </React.StrictMode>
 );
 

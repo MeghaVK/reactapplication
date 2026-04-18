@@ -6,7 +6,8 @@ const Body = (props) => {
   // this is one method
   const [listofRestaurant, setlistofRestaurant] = useState(RestaurantList);
   const [searchinput, setsearchinput] = useState('');
-  const[foodcarousel,setfoodcarousel]=useState(carouseldata)
+  const[foodcarousel,setfoodcarousel]=useState(carouseldata);
+  const[username,setusername]=useState('');
   //  setfoodcarousel(foodcarousel);
   useEffect(() => {
     //     fetch(API_URL).then((res)=>{
@@ -16,10 +17,11 @@ const Body = (props) => {
     console.log('useEffect called')
   }, []);
   console.log('body rendered');
-  const fetchData = async () => {
-    const API_URL = 'https://jsonplaceholder.typicode.com/todos/1';
-    const data = await fetch(API_URL);
-    console.log('api response =', data)
+  const fetchData =  () => {
+    // const API_URL = 'https://jsonplaceholder.typicode.com/todos/1';
+    // const data = await fetch(API_URL);
+    // console.log('api response =', data);
+    setusername('Megha')
  
   }
 
@@ -35,6 +37,7 @@ const Body = (props) => {
   }
 
  }
+//  setusername('')
   //  setTimeout(() => {
   //     setlistofRestaurant(RestaurantList);
   //     // setLoading(false);
@@ -49,17 +52,23 @@ const Body = (props) => {
       <div className='container-fluid'>
         <div className='d-flex justify-content-end align-items-center gap-3 flex-wrap'>
           <div className='arrows '>
-            <button className='btn btn-warning' onClick={()=>{
+            
+            {/* <button className='btn btn-warning' onClick={()=>{
             console.log('left');
               handleScroll('left')
             }}>Prev</button> <button onClick={()=>{
               console.log('right');
               handleScroll('right')
-            }} className='btn btn-warning'>Next</button>
+            }} className='btn btn-warning'>Next</button>  */}
+            
+           <button className='btn btn-warning' onClick={() => handleScroll('left')}>Prev</button>
+            <button className='btn btn-warning' onClick={() => handleScroll('right')}>Next</button>
+            
           </div>
         </div>
       </div>
       <div className='container'>
+        <h2>`{username}, Whats on your mind` </h2>
         <div className='offer-carousel' id="offer-carousel">
    
 {foodcarousel.map((fooditem)=>( <div className='card ' id="offer-carousel-item" key={fooditem.id}>
@@ -90,7 +99,7 @@ const Body = (props) => {
 
                 });
                 console.log(filteredResto)
-                setlistofRestaurant(filteredResto)
+                // setlistofRestaurant(filteredResto)
               }
             }}>Search</button>
 
