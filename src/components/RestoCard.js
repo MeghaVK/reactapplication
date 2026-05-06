@@ -1,16 +1,16 @@
 
 import { Link } from "react-router-dom";
-const RestoCard = (props,index) => {
-    
-  const {restoData}=props;
-  if(!restoData || !restoData.info) return null;
-  const {name,cuisines,avgRating,deliveryTime,id}=restoData?.info;
+import { CDN_URL, } from "../utils/constants";
+const RestoCard = (props) => {
+  const restoData=props?.resData;
+  if(!restoData ) return null;
+  const {name,cuisines,avgRating,deliveryTime,resId}=restoData?.info;
 
   return (
-    <Link to={`/restaurantmenu/${id}`}>
+    
     <div className='card shdow-sm'>
       <div className='imgDiv justify-content-center d-flex'>
-        <img src={restoData.info.cloudinaryImageId} className='card-img-top' alt='food' ></img>
+        <img src={CDN_URL + restoData.info.cloudinaryImageId} className='card-img-top' alt='food' ></img>
       </div>
       <div className='card-body'>
         <h5 className='card-title'>
@@ -21,6 +21,21 @@ const RestoCard = (props,index) => {
         <p className='card-text'>{deliveryTime}</p>
       </div>
     </div>
-    </Link>)
+    )
+}
+
+
+export const VegResto =()=>{
+  return(props)=>{
+    return(
+      <div className="position-relative">
+  <div className="veg-badge">
+    Veg
+  </div>
+
+  <RestoCard {...props} />
+</div>
+    )
+  }
 }
 export default RestoCard;

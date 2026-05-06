@@ -8,6 +8,7 @@ export const RestaurantList = [
       avgRating: "4.2",
       costForTwo: "₹400 for two",
       deliveryTime: "30 mins",
+     
     },
   },
   {
@@ -63,6 +64,7 @@ export const RestaurantList = [
       avgRating: "4.0",
       costForTwo: "₹300 for two",
       deliveryTime: "20 mins",
+       type:"veg"
     },
   },
   {
@@ -74,6 +76,7 @@ export const RestaurantList = [
       avgRating: "4.4",
       costForTwo: "₹600 for two",
       deliveryTime: "40 mins",
+       type:"Nonveg"
     },
   },
   {
@@ -85,6 +88,7 @@ export const RestaurantList = [
       avgRating: "3.5",
       costForTwo: "₹250 for two",
       deliveryTime: "22 mins",
+      type:"veg"
     },
   },
   {
@@ -118,6 +122,7 @@ export const RestaurantList = [
       avgRating: "3.5",
       costForTwo: "₹300 for two",
       deliveryTime: "18 mins",
+      type:'veg'
     },
   },
 ];
